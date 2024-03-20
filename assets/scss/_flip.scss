@@ -1,0 +1,97 @@
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 3s;
+    transform-style: preserve-3d;
+  }
+
+  .ticket:hover .flip-card-inner {
+    transform: rotateY(180deg);
+        
+
+  }
+
+  .ticketback{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 101%;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	  background-size: 400% 400%;
+  	animation: gradient 2s ease infinite;
+    color: #F8F8FF;
+    transform: rotateY(180deg);   
+    border-radius: 1.3rem;
+    &:before{
+      content: "";
+      width: 3.5rem;
+      height: 3.5rem;
+      background-color: $gray-400;
+      position: absolute;
+      border-radius: 50%;
+      top: 34rem;
+      left: -2.8rem;
+  }
+  &:after{
+      content: "";
+      width: 3.5rem;
+      height: 3.5rem;
+      background-color: $gray-400;
+      position: absolute;
+      border-radius: 50%;
+      top: 34rem;
+      right: -2.8rem;
+  }
+  .tudo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  .agradecimento{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+   font-size: 1.2rem;
+   margin-bottom: 5rem;
+  }
+  .emoji{
+    width: 7rem;
+    height: 7rem;
+    
+  }
+  .github{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 26rem;
+    position: fixed;
+  } 
+  a{
+    text-decoration: none;
+    color: #F8F8FF;
+    font-size: .7rem;
+    cursor: pointer;
+  }
+  }
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
